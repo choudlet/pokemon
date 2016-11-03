@@ -1,0 +1,48 @@
+
+body,html {
+  height:100%;
+  background: -webkit-linear-gradient(-45deg, rgba(154,41,30,1) 13%,rgba(196,87,83,1) 42%,rgba(232,126,128,0.48) 67%,rgba(232,126,128,0) 90%);
+}
+
+.title {
+    font-family: 'Titillium Web', sans-serif;
+    text-align:center;
+}
+
+main {
+  font-family:'Open Sans', sans-serif;
+}
+.searchbox {
+  display:flex;
+  width:100%;
+}
+.searchbar {
+  justify-content: center;
+  margin-left:34%;
+  padding: 0;
+}
+
+.frame1 {
+  display:inline-block;
+
+}
+
+.frame2 {
+  display:inline-block;
+
+}
+
+.pictures {
+  width:100%;
+  margin-left: 35%;
+}
+.dropdown {
+  margin-top: 2em;
+  display:inline-block;
+  margin-left: 34%;
+
+}
+
+.response{
+  margin-left:34%;
+}

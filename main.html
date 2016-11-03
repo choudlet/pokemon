@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pokemon Stat Checker</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+        <h1>Pokemon Stat Checker</h1>
+        <p>
+            Search and Select 2 Pokemon! Then pick a stat from the dropdown menu to figure out which Pokemon reigns supreme!
+        </p>
+        </div>
+    </header>
+    <main>
+        <div class="searchbox">
+        <section class="searchbar">
+            <form="pokesearch">
+                <fieldset>
+                    <legend>Pick Your Pokemon!</legend>
+                    <div class="searching" class="searchone">
+                    <label for="search">Pick Pokemon 1</label>
+                    <input class="search" name="search" type="text" value="" />
+                    <input name="search" type="submit" class="searchbutton" />
+                    </div>
+                    <div class="searching" class="searchtwo">
+                    <label for="search2">Pick Pokemon 2</label>
+                    <input class="search2" name="search2" type="text" value="" />
+                    <input name="search2" type="submit" class="searchbutton2" />
+                    </div>
+                </fieldset>
+                </form>
+        </section>
+      </div>
+        <section class="pictures">
+            <div class="frame1">
+                <figure>
+                    <img class="pic1" src="question.gif" />
+                    <figcaption class="poke1name">Unknown</figcaption>
+                </figure>
+                <div class="bothhp">
+                    <span>Hp</span>
+                    <span class="poke1hp">?</span>
+                </div>
+                <div class="bothattack">
+                    <span>Attack</span><span class="poke1attack">?</span>
+                </div>
+                <div class="bothdefense">
+                    <span>Defense</span><span class="poke1defense">?</span>
+                </div>
+                <div class="bothspeed">
+                    <span>Speed</span><span class="poke1speed">?</span>
+                </div>
+                <div class="bothsa">
+                    <span>Special-attack</span><span class="poke1sa">?</span>
+                </div>
+                <div class="bothsd">
+                    <span>Special-defense</span><span class="poke1sd">?</span>
+                </div>
+            </div>
+            <div class="frame2">
+                <figure>
+                    <img class="pic2" src="question.gif" />
+                    <figcaption class="poke2name">Unknown</figcaption>
+                </figure>
+                <div class="bothhp">
+                    <span>Hp</span>
+                    <span class="poke2hp">?</span>
+                </div>
+                <div class="bothattack">
+                    <span>Attack</span><span class="poke2attack">?</span>
+                </div>
+                <div class="bothdefense">
+                    <span>Defense</span><span class="poke2defense">?</span>
+                </div>
+                <div class="bothspeed">
+                    <span>Speed</span><span class="poke2speed">?</span>
+                </div>
+                <div class="bothsa">
+                    <span>Special-attack</span><span class="poke2sa">?</span>
+                </div>
+                <div class="bothsd">
+                    <span>Special-defense</span><span class="poke2sd">?</span>
+                </div>
+            </div>
+        </section>
+        <section class="dropdown">
+            <form>
+              <fieldset>Now Pick the Attribute to Compare!
+                <select name="attribute">
+                  <option class="blank" value="" selected></option>
+                  <option class="hp" value="hp">HP</option>
+                  <option class="attack" value="attack">Attack</option>
+                  <option class="defense" value="defense" >Defense</option>
+                  <option class="speed" value="speed">Speed</option>
+                  <option class="special-attack" value="sa">Special-Attack</option>
+                  <option class="special-defense" value="sd">Special-Defense</option>
+              </fieldset>
+              </select>
+            <form>
+          </form>
+        </section>
+        <section class="response">
+        </section>
+    </main>
+    <footer>
+      <div class="audio1">
+      <audio id="music1" src="http://66.90.94.162/ost/pokemon-original-game-soundtrack/okjzrvjggv/102-palette-town-theme.mp3" preload="auto"></audio>
+      </div>
+      <audio id="music2" src="http://66.90.94.162/ost/pokemon-original-game-soundtrack/lyugvjignp/128-battle-vs-gym-leader-.mp3" preload="auto"></audio>
+    </footer>
+</body>
+
+</html>
