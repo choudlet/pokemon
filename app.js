@@ -3,7 +3,7 @@ $(document).ready(function(){
 //music2.play();
 $('.searchbutton').click(pickPokemon);
 $('.searchbutton2').click(pickPokemon2);
-$('select').bind('change', comparePokemon);
+$('select').change(comparePokemon);
 });
 
 // how do I get this to work with figcaption text
