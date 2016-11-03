@@ -32,6 +32,10 @@ main {
 
 }
 
+figcaption {
+  text-transform: capitalize;
+}
+
 .pictures {
   width:100%;
   margin-left: 35%;

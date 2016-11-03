@@ -3,7 +3,7 @@ $(document).ready(function(){
 //music2.play();
 $('.searchbutton').click(pickPokemon);
 $('.searchbutton2').click(pickPokemon2);
-$('select').change(comparePokemon);
+$('select').bind('change', comparePokemon);
 });
 
 // how do I get this to work with figcaption text
@@ -17,11 +17,11 @@ function capitalize(string) {
 
 function pickPokemon() {
   pokeFind = $('.search').val();
+  $('.search').val('');
   $.get("http://pokeapi.co/api/v2/pokemon/" + pokeFind, function(data){
     console.log(data);
     $('.pic1').attr('src', data.sprites.front_default);
     $('.poke1name').text(data.name);
-
     $('.poke1speed').text(" "+ data.stats[0].base_stat);
     $('.poke1sd').text(" "+ data.stats[1].base_stat);
     $('.poke1sa').text(" "+ data.stats[2].base_stat);
@@ -33,6 +33,7 @@ function pickPokemon() {
 
 function pickPokemon2() {
   pokeFind2 = $('.search2').val();
+  $('.search2').val('');
 $.get("http://pokeapi.co/api/v2/pokemon/" + pokeFind2, function(data){
   console.log(data);
   $('.pic2').attr('src', data.sprites.front_default);
@@ -48,6 +49,8 @@ $.get("http://pokeapi.co/api/v2/pokemon/" + pokeFind2, function(data){
 
 function comparePokemon() {
   $('.response').html('');
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('font-size', 14);
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('color', 'black');
   currentAttribute = $('select').val();
   if (($('.poke1name').text() === "Unknown") || ($('.poke2name').text() === "Unknown")) {
     alert('Please submit both Pokemon');
