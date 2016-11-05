@@ -28,11 +28,13 @@
                     <label for="search">Pick Pokemon 1</label>
                     <input class="search" name="search" type="text" value="" />
                     <input name="search" type="submit" class="searchbutton" />
+                    <button for="search2" name="search2" class="random1" type="submit" value="">Random</button>
                     </div>
                     <div class="searching" class="searchtwo">
                     <label for="search2">Pick Pokemon 2</label>
                     <input class="search2" name="search2" type="text" value="" />
                     <input name="search2" type="submit" class="searchbutton2" />
+                    <button for="search2" name="search2" class="random2" type="submit" value="">Random</button>
                     </div>
                 </fieldset>
                 </form>
@@ -93,8 +95,8 @@
         <section class="dropdown">
             <form>
               <fieldset>Now Pick the Attribute to Compare!
-                <select name="attribute">
-                  <option class="blank" value="" selected></option>
+                <select name="attribute" class="attribute">
+                  <option class="blank" value="default" selected></option>
                   <option class="hp" value="hp">HP</option>
                   <option class="attack" value="attack">Attack</option>
                   <option class="defense" value="defense" >Defense</option>

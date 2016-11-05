@@ -3,6 +3,8 @@ $(document).ready(function(){
 //music2.play();
 $('.searchbutton').click(pickPokemon);
 $('.searchbutton2').click(pickPokemon2);
+$('.random1').click(pickRandom1);
+$('.random2').click(pickRandom2);
 $('select').change(comparePokemon);
 });
 
@@ -16,6 +18,10 @@ function capitalize(string) {
 }
 
 function pickPokemon() {
+  $('.attribute').val('default');
+  $('.response').html('');
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('font-size', 14);
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('color', 'black');
   pokeFind = $('.search').val();
   $('.search').val('');
   $.get("http://pokeapi.co/api/v2/pokemon/" + pokeFind, function(data){
@@ -32,6 +38,10 @@ function pickPokemon() {
 }
 
 function pickPokemon2() {
+  $('.attribute').val('default');
+  $('.response').html('');
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('font-size', 14);
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('color', 'black');
   pokeFind2 = $('.search2').val();
   $('.search2').val('');
 $.get("http://pokeapi.co/api/v2/pokemon/" + pokeFind2, function(data){
@@ -45,6 +55,46 @@ $.get("http://pokeapi.co/api/v2/pokemon/" + pokeFind2, function(data){
   $('.poke2attack').text(" "+ data.stats[4].base_stat);
   $('.poke2hp').text(" "+ data.stats[5].base_stat);
 });
+}
+
+function pickRandom1() {
+  $('.attribute').val('default');
+  $('.response').html('');
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('font-size', 14);
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('color', 'black');
+  pokeFindRandom1 = Math.floor((Math.random() * 721) + 1);
+  $.get("http://pokeapi.co/api/v2/pokemon/" + pokeFindRandom1, function(data){
+    console.log(data);
+    $('.pic1').attr('src', data.sprites.front_default);
+    $('.poke1name').text(data.name);
+    $('.poke1speed').text(" "+ data.stats[0].base_stat);
+    $('.poke1sd').text(" "+ data.stats[1].base_stat);
+    $('.poke1sa').text(" "+ data.stats[2].base_stat);
+    $('.poke1defense').text(" "+ data.stats[3].base_stat);
+    $('.poke1attack').text(" "+ data.stats[4].base_stat);
+    $('.poke1hp').text(" "+ data.stats[5].base_stat);
+  });
+
+}
+
+function pickRandom2() {
+  $('.attribute').val('default');
+  $('.response').html('');
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('font-size', 14);
+  $('.bothhp, .bothattack, .bothdefense, .bothspeed, .bothsa, .bothsd').css('color', 'black');
+  pokeFindRandom1 = Math.floor((Math.random() * 721) + 1);
+  $.get("http://pokeapi.co/api/v2/pokemon/" + pokeFindRandom1, function(data){
+    console.log(data);
+    $('.pic2').attr('src', data.sprites.front_default);
+    $('.poke2name').text(data.name);
+    $('.poke2speed').text(" "+ data.stats[0].base_stat);
+    $('.poke2sd').text(" "+ data.stats[1].base_stat);
+    $('.poke2sa').text(" "+ data.stats[2].base_stat);
+    $('.poke2defense').text(" "+ data.stats[3].base_stat);
+    $('.poke2attack').text(" "+ data.stats[4].base_stat);
+    $('.poke2hp').text(" "+ data.stats[5].base_stat);
+  });
+
 }
 
 function comparePokemon() {
